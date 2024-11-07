@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Trodon</title>
+    <link rel="stylesheet" href="css/Contactanos.css">
+    <link rel="icon" href="imagenes/Logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo-menu">
+            <img src="imagenes/Logo.png" alt="Trodon Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="Trabajo.html">Inicio</a></li>
+                    <li><a href="Profesionales.html">Profesionales</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                    <li><a href="Contactanos.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="contact-section">
+            <H1>Contáctanos</H1>
+            <p>Estamos aquí para ayudarte. Si tienes preguntas, sugerencias o necesitas más información sobre nuestros servicios, no dudes en ponerte en contacto con nosotros. Nuestro equipo está listo para atenderte y ofrecerte el apoyo que necesites.</p>
+        </section>
+    </main>
+    
+</body>
+
+</head>
+<body>
+
+    <div class="contenedor">
+   
+        <form id="formularioContacto" onsubmit="validarFormulario(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
+            <div id="errorNombre" class="error">El nombre solo debe contener letras.</div>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Escribe tu e-mail" required>
+            <div id="errorEmail" class="error">Por favor, ingrese un correo electrónico válido.</div>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu teléfono" required>
+            <div id="errorTelefono" class="error">El teléfono debe contener solo números y tener 10 dígitos.</div>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+            <div id="errorMensaje" class="error">Por favor, ingrese un mensaje.</div>
+
+            <input type="submit" value="ENVIAR MENSAJE">
+        </form>
+        
+
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <script>
+        function validarFormulario(event) {
+            event.preventDefault();
+
+            // Obtener valores
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var telefono = document.getElementById('telefono').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            let esValido = true;
+
+            // Validación del nombre (solo letras)
+            const regexNombre = /^[a-zA-Z\s]+$/;// regex significa expresion regular
+            if (!regexNombre.test(nombre)) { // El método .test() evalúa si el valor de nombre coincide con la expresión regular regexNombre.
+                //.test(nombre) devuelve true (el nombre es válido), entonces !true se convierte en false, por lo que no entraría en el if.
+                document.getElementById('errorNombre').style.display = 'block';
+                
+                esValido = false;
+                console.log(esValido);
+            } else {
+                document.getElementById('errorNombre').style.display = 'none';
+            }
+
+            // Validación del correo (formato adecuado con @)
+            const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+            if (!regexEmail.test(email)) {
+                document.getElementById('errorEmail').style.display = 'block';
+                esValido = false;
+            } else {
+                document.getElementById('errorEmail').style.display = 'none';
+            }
+
+            // Validación del teléfono (solo números y 10 dígitos)
+            const regexTelefono = /^\d{10}$/;
+            if (!regexTelefono.test(telefono)) {
+                document.getElementById('errorTelefono').style.display = 'block';
+                esValido = false;
+            } else {
+                document.getElementById('errorTelefono').style.display = 'none';
+            }
+
+            // Validación del mensaje (no vacío)
+            if (mensaje.trim() === "") { //trim elimina los espacios en blanco del inicio y final
+                document.getElementById('errorMensaje').style.display = 'block';
+                esValido = false;
+            } else {
+                document.getElementById('errorMensaje').style.display = 'none';
+            }
+
+            // Si todo es válido, mostrar los datos
+            if (esValido) {
+                const resultado = document.getElementById('resultado');
+                resultado.innerHTML = `
+                    <h3>Datos enviados:</h3>
+                    <p><strong>Nombre:</strong> ${nombre}</p>
+                    <p><strong>Correo electrónico:</strong> ${email}</p>
+                    <p><strong>Teléfono:</strong> ${telefono}</p>
+                    <p><strong>Mensaje:</strong> ${mensaje}</p>
+                `;
+                resultado.style.display = 'block';
+            }
+        }
+    </script>
+
+<footer>
+    <div class="contact-info">
+        <p>Vía E-mail<br><a href="mailto:trodon@troodon.com">trodon@troodon.com</a></p>
+        <p>En nuestras redes sociales<br><a href="https://twitter.com/trodon">@trodon</a></p>
+        <p>Por teléfono<br><a href="tel:300 000 0000">300 000 0000</a></p>
+    </div>
+    <p>2024 - TRODON</p>
+    <nav>
+        <ul>
+            <li><a href="Copyright.html">Copyright</a></li>
+            <li><a href="Politicas.html">Politicas de privacidad</a></li>
+            <li><a href="Descargo de responsabilidades.html">Descargo de responsabilidades</del></a></li>
+            <li><a href="Terminos y condiciones.html">Termino y condiciones</a></li>
+        </ul>
+    </nav>
+</footer>    
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el idioma de la página como español -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Asegura que la página sea responsiva en dispositivos móviles -->
+    <title>Troodon</title> <!-- Título de la página que aparecerá en la pestaña del navegador -->
+    <link rel="stylesheet" href="css/css.css"> <!-- Enlace a un archivo CSS externo para el estilo de la página -->
+    <link rel="icon" href="imagenes/Logo.png" type="image/x-icon">
+    <!-- Establece el icono de la pestaña del navegador -->
+
+    <style>
+        /* Estilos internos para el modo claro y modo oscuro */
+        body {
+            transition: background-color 0.3s, color 0.3s;
+            /* Transición suave al cambiar colores */
+            background-color: #ffffff;
+            /* Color de fondo claro por defecto */
+            color: #000000;
+            /* Color del texto en negro por defecto */
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            /* Fondo oscuro para el modo oscuro */
+            color: #ffffff;
+            /* Color de texto blanco para el modo oscuro */
+        }
+
+        .mode-toggle {
+            cursor: pointer;
+            /* El cursor cambia a puntero cuando pasas por encima */
+            width: 40px;
+            /* Establece el ancho de la imagen del botón */
+            height: 40px;
+            /* Establece la altura de la imagen del botón */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado de la página -->
+    <header>
+        <div class="logo">
+            <!-- Logo de la empresa, que enlaza a la imagen desde la carpeta 'imagenes' -->
+            <img src="imagenes/Logo.png" alt="Logo Ensigna" width="65" height="65">
+        </div>
+        <nav>
+            <ul>
+                <!-- Menú de navegación con enlaces a las diferentes secciones de la página -->
+                <li><a href="trodon.html">Inicio</a></li>
+                <li><a href="Profesionales.html">Profesionales</a></li>
+                <li><a href="Servicios.html">Servicios</a></li>
+                <li><a href="Contactanos.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botón para activar el modo oscuro (imagen con id 'toggle-button') -->
+        <img src="imagenes/Blanco Negro.png" id="toggle-button" class="mode-toggle" alt="Cambiar Modo" />
+    </header>
+
+    <!-- Sección principal de la página -->
+    <section class="hero">
+        <div class="content">
+            <h1>A tu alcance <span>TRODON</span></h1>
+            <!-- Descripción de la empresa -->
+            <p>Trodon es una empresa de desarrollo web especializada en HTML, que ofrece soluciones personalizadas con
+                diseño responsivo y optimización de sitios. Se destaca por combinar funcionalidad y estética,
+                adaptándose a las necesidades de cada cliente.</p>
+        </div>
+        <div class="image">
+            <!-- Imagen representativa de la empresa -->
+            <img src="imagenes/Estructura.png" alt="3D shape">
+        </div>
+    </section>
+
+    <!-- Sección de proyectos de la empresa -->
+    <section class="projects">
+        <h2>Proyectos</h2>
+        <div class="project-list">
+            <!-- Cada proyecto tiene una imagen, título y descripción -->
+            <div class="project">
+                <img src="imagenes/1.png" width="65" height="65"> <!-- Imagen del proyecto -->
+                <h3>E-commerce Personalizado</h3> <!-- Título del proyecto -->
+                <p>Desarrollamos una tienda online para una marca de moda, integrando un diseño responsivo y un sistema
+                    de pago seguro.</p> <!-- Descripción del proyecto -->
+            </div>
+            <div class="project">
+                <img src="imagenes/2.png" width="65" height="65">
+                <h3>Blog de Viajes Interactivo</h3>
+                <p>Creamos un blog de viajes con una interfaz atractiva y funcional.</p>
+            </div>
+            <div class="project">
+                <img src="imagenes/3.png" width="65" height="65">
+                <h3>Portal de Servicios Corporativos</h3>
+                <p>Diseñamos un sitio web para una empresa de servicios profesionales, enfocándonos en la usabilidad.
+                </p>
+            </div>
+        </div>
+        <br>
+    </section>
+
+    <!-- Pie de página con información de contacto -->
+    <footer>
+        <div class="contact-info">
+            <p>Vía E-mail<br><a href="mailto:trodon@trodon.com">trodon@trodon.com</a></p>
+            <!-- Enlace para enviar un email -->
+            <p>En nuestras redes sociales<br><a href="https://twitter.com/troodon">@trodon</a></p>
+            <!-- Enlace al perfil de Twitter -->
+            <p>Por teléfono<br><a href="tel:300 000 0000">300 000 0000</a></p>
+            <!-- Enlace para hacer una llamada telefónica -->
+        </div>
+    </footer>
+
+    <!-- Información adicional en el pie de página -->
+    <p>2024 - TRODON</p>
+    <nav>
+        <ul>
+            <!-- Enlaces a otras páginas legales como Copyright, políticas, términos, etc. -->
+            <li><a href="Copyright.html">Copyright</a></li>
+            <li><a href="Politicas.html">Politicas de privacidad</a></li>
+            <li><a href="Descargo de responsabilidades.html">Descargo de responsabilidades</del></a></li>
+            <!-- Error en el cierre de la etiqueta </del> -->
+            <li><a href="Terminos y condiciones.html">Termino y condiciones</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // JavaScript para cambiar entre el modo oscuro y el modo claro
+        const toggleButton = document.getElementById('toggle-button'); // Obtiene el botón para cambiar el modo
+        const body = document.body; // Obtiene el cuerpo de la página
+
+        toggleButton.addEventListener('click', () => {
+            // Al hacer clic, se alterna la clase 'dark-mode' en el cuerpo de la página
+            body.classList.toggle('dark-mode');
+
+            // Cambia la imagen del botón dependiendo del modo
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.src = 'imagenes/Blanco Negro.png'; // Cambia la imagen al modo oscuro
+            } else {
+                toggleButton.src = 'imagenes/Blanco Negro.png'; // Cambia la imagen al modo claro
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+/* Establece los estilos básicos para todos los elementos */
+* {
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el padding por defecto de todos los elementos */
+    box-sizing: border-box; /* Incluye el borde y el padding dentro del ancho y alto del elemento */
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente principal del texto */
+    background-color: #000; /* Establece un fondo negro para el cuerpo de la página */
+    color: #fff; /* Establece el color de texto blanco */
+}
+
+/* Estilos para el encabezado */
+header {
+    display: flex; /* Usa Flexbox para distribuir los elementos dentro del header */
+    justify-content: space-between; /* Distribuye los elementos a los extremos del encabezado */
+    align-items: center; /* Centra verticalmente los elementos del header */
+    padding: 20px; /* Espaciado interno (padding) de 20px */
+    background-color: #222; /* Fondo oscuro para el encabezado */
+}
+
+/* Estilos para la lista de navegación dentro del header */
+header nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Hace que los elementos de la lista se dispongan en una fila */
+}
+
+/* Estilos para los elementos de la lista de navegación */
+header nav ul li {
+    margin-left: 20px; /* Añade espacio a la izquierda de cada elemento de la lista */
+}
+
+/* Estilos para los enlaces dentro de los elementos de la lista */
+header nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #fff; /* Define el color del texto de los enlaces como blanco */
+    font-weight: bold; /* Hace que los enlaces sean en negrita */
+    transition: color 0.3s; /* Añade una transición suave al cambio de color */
+}
+
+/* Estilo para el cambio de color de los enlaces cuando se pasa el cursor por encima */
+header nav ul li a:hover {
+    color: #d4ff00; /* Cambia el color a amarillo cuando el enlace es hovered */
+}
+
+/* Estilos para la sección "hero" (principal) de la página */
+.hero {
+    display: flex; /* Usa Flexbox para organizar los elementos */
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    padding: 50px; /* Añade espacio interno de 50px */
+}
+
+/* Estilos para el contenido dentro de la sección hero */
+.hero .content {
+    max-width: 50%; /* Limita el ancho del contenido a un máximo del 50% */
+}
+
+/* Estilos para el título principal dentro de la sección hero */
+.hero h1 {
+    font-size: 3rem; /* Tamaño grande para el título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Estilos específicos para el texto resaltado dentro del título hero */
+.hero h1 span {
+    color: #d4ff00; /* Color amarillo para el texto dentro del span */
+}
+
+/* Estilos para el párrafo dentro de la sección hero */
+.hero p {
+    font-size: 1.2rem; /* Define el tamaño de la fuente como 1.2rem */
+    margin-bottom: 30px; /* Espacio debajo del párrafo */
+}
+
+/* Estilos para el botón dentro de la sección hero */
+.hero .btn {
+    background-color: #d4ff00; /* Fondo amarillo para el botón */
+    color: #000; /* Texto negro para el botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    text-decoration: none; /* Elimina el subrayado en el enlace del botón */
+    font-weight: bold; /* Hace que el texto del botón sea en negrita */
+}
+
+/* Estilos para la sección de proyectos */
+.projects {
+    padding: 50px; /* Espaciado interno de 50px */
+    background-color: #111; /* Fondo muy oscuro para la sección de proyectos */
+}
+
+/* Estilos para el título de la sección de proyectos */
+.projects h2 {
+    text-align: center; /* Centra el título */
+    margin-bottom: 50px; /* Espacio debajo del título */
+}
+
+/* Estilos para la lista de proyectos, organizados en una fila */
+.project-list {
+    display: flex; /* Usa Flexbox para organizar los proyectos en una fila */
+    justify-content: space-around; /* Distribuye los proyectos equitativamente */
+}
+
+/* Estilos para cada proyecto individual dentro de la lista de proyectos */
+.project {
+    max-width: 30%; /* Limita el ancho máximo de cada proyecto a un 30% */
+    background-color: #222; /* Fondo oscuro para cada proyecto */
+    padding: 20px; /* Espaciado interno de 20px */
+    border-radius: 10px; /* Bordes redondeados para cada proyecto */
+}
+
+/* Estilos para el título de cada proyecto */
+.project h3 {
+    color: #d4ff00; /* Color amarillo para el título del proyecto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Estilos para la sección de contacto */
+.contact {
+    padding: 50px; /* Espaciado interno de 50px */
+    background-color: #111; /* Fondo oscuro para la sección de contacto */
+}
+
+/* Estilos para el formulario dentro de la sección de contacto */
+.contact form {
+    display: flex; /* Usa Flexbox para organizar los elementos dentro del formulario */
+    flex-direction: column; /* Los elementos se organizan en una columna */
+    gap: 10px; /* Añade un espacio de 10px entre los elementos */
+}
+
+/* Estilos para los campos de entrada (input) y el área de texto (textarea) en el formulario */
+.contact form input, .contact form textarea {
+    padding: 10px; /* Espaciado interno de 10px */
+    border: none; /* Elimina el borde por defecto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para el botón de envío del formulario */
+.contact form button {
+    background-color: #d4ff00; /* Fondo amarillo para el botón */
+    color: #000; /* Texto negro para el botón */
+    padding: 10px; /* Espaciado interno de 10px */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para la información de contacto */
+.contact-info {
+    margin-bottom: 20px; /* Espacio debajo de la sección de información de contacto */
+}
+
+/* Estilos para los enlaces dentro de la sección de información de contacto */
+.contact-info a {
+    color: #d4ff00; /* Color amarillo para los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* Estilos para el pie de página */
+footer {
+    display: flex; /* Usa Flexbox para organizar los elementos dentro del pie de página */
+    text-align: center; /* Centra el texto dentro del pie de página */
+    padding: 20px; /* Espaciado interno de 20px */
+    background-color: #222; /* Fondo oscuro para el pie de página */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho disponible */
+}

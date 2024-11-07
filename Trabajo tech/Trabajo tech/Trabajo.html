@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troodon</title>
+    <link rel="stylesheet" href="css/Trabajo.css">
+    <link rel="icon" href="imagenes/Logo.png" type="image/x-icon">
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #ffffff; 
+            color: #000000; 
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff; 
+        }
+        .mode-toggle {
+            cursor: pointer;
+            width: 40px; 
+            height: 40px; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="imagenes/Logo.png" alt="Logo Ensigna" width="65" height="65">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Trabajo.html">Inicio</a></li>
+                <li><a href="Profesionales.html">Profesionales</a></li>
+                <li><a href="Servicios.html">Servicios</a></li>
+                <li><a href="Contactanos.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <img src="imagenes/Blanco Negro.png" id="toggle-button" class="mode-toggle" alt="Cambiar Modo" /> <!-- Imagen para activar el modo oscuro -->
+    </header>
+
+    <!-- Sección principal -->
+    <section class="hero">
+        <div class="content">
+            <h1>A tu alcance <span>TRODON</span></h1>
+            <p>Trodon es una empresa de desarrollo web especializada en HTML, que ofrece soluciones personalizadas con diseño responsivo y optimización de sitios. Se destaca por combinar funcionalidad y estética, adaptándose a las necesidades de cada cliente.</p>
+        </div>
+        <div class="image">
+            <img src="imagenes/Estructura.png" alt="3D shape">
+        </div>
+    </section>
+
+    <!-- Sección de proyectos -->
+    <section class="projects">
+        <h2>Proyectos de TRODON</h2>
+        <div class="project-list">
+            <div class="project">
+                <img src="imagenes/1.png" width="65" height="65">
+                <h3>E-commerce Personalizado</h3>
+                <p>Desarrollamos una tienda online para una marca de moda, integrando un diseño responsivo y un sistema de pago seguro.</p>
+            </div>
+            <div class="project">
+                <img src="imagenes/2.png" width="65" height="65">
+                <h3>Blog de Viajes Interactivo</h3>
+                <p>Creamos un blog de viajes con una interfaz atractiva y funcional.</p>
+            </div>
+            <div class="project">
+                <img src="imagenes/3.png" width="65" height="65">
+                <h3>Portal de Servicios Corporativos</h3>
+                <p>Diseñamos un sitio web para una empresa de servicios profesionales, enfocándonos en la usabilidad.</p>
+            </div>
+        </div>
+        <br>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="contact-info">
+            <p>Vía E-mail<br><a href="mailto:trodon@trodon.com">trodon@trodon.com</a></p>
+            <p>En nuestras redes sociales<br><a href="https://twitter.com/troodon">@trodon</a></p>
+            <p>Por teléfono<br><a href="tel:300 000 0000">300 000 0000</a></p>
+        </div>
+    </footer>
+    <p>2024 - TRODON</p>
+    <nav>
+        <ul>
+            <li><a href="Copyright.html">Copyright</a></li>
+            <li><a href="Politicas.html">Politicas de privacidad</a></li>
+            <li><a href="Descargo de responsabilidades.html">Descargo de responsabilidades</del></a></li>
+            <li><a href="Terminos y condiciones.html">Termino y condiciones</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            // Cambia la imagen según el modo
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.src = 'imagenes/Blanco Negro.png'; // Cambia a una imagen de luna
+            } else {
+                toggleButton.src = 'imagenes/Blanco Negro.png'; // Cambia a una imagen de sol
+            }
+        });
+    </script>
+</body>
+</html>
