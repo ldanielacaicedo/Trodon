@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="carrusel.js"></script>
+    <style>
+      .carrusel{
+        position: relative;
+        top: 0px;
+        left: 0px;
+      }
+
+      .carrusel img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100% !important; /*forzar que tome este estilo y descarte la herencia del estilo*/
+        transition: all 1s linear;
+      }
+
+      .img_visible{
+        opacity: 1;
+        transition: all 1s linear;
+      }
+
+      .img_oculto{
+        opacity: 0;
+        transition: all 1s linear;
+      }
+
+      #siguiente{
+        display: inline-block;
+        vertical-align: top;
+        height: 500px;
+      }
+
+      #siguiente img{
+        position: relative;
+        display: block;
+        max-width: 100px;
+        height: 100px;
+        top: 35%;
+      }
+
+      #anterior{
+        display: inline-block;
+        vertical-align: top;
+        height: 500px;
+      }
+
+      #anterior img{
+        position: relative;
+        display: block;
+        max-width: 100px;
+        height: 100px;
+        top: 35%;
+      }
+
+      #slider{
+        display: block; 
+        margin-top: 0 auto; 
+        text-align: center;
+      }
+
+      @media screen and (max-width:800px){ 
+        #siguiente{
+          height: 200px;
+        }
+
+        #siguiente img{
+          max-width: 25px;
+          height: 25px;
+          top: 40%;
+        }
+
+        #anterior{
+          height: 200px;
+        }
+
+        #anterior img{
+          max-width: 25px;
+          height: 25px;
+          top: 45%;
+        }
+      }
+
+      @media screen and (max-width:550px){ 
+        #siguiente{
+          height: 125px;
+        }
+
+        #siguiente img{
+          max-width: 25px;
+          height: 25px;
+          top: 40%;
+        }
+
+        #anterior{
+          height: 125px;
+        }
+
+        #anterior img{
+          max-width: 25px;
+          height: 25px;
+          top: 45%;
+        }
+      }
+    </style>
+</head>
+<body>
+    <br/>
+    <div id="slider" style="">
+      <div id="anterior"><img src="left-chevron.png" /></div>
+      <section id="sec_carrusel" style="display: inline-block; width: 85%; position: relative;">
+          <div class="carrusel"><img src="imagen1.webp" class="img_visible"/></div>
+          <div class="carrusel"><img src="imagen2.webp" class="img_oculto"/></div>
+          <div class="carrusel"><img src="imagen3.webp" class="img_oculto" /></div>
+          <div class="carrusel"><img src="imagen4.webp" class="img_oculto"/></div>
+      </section>
+      <div id="siguiente" ><img src="right-chevron.png"/></div>
+    </div>
+</body>
+</html>
